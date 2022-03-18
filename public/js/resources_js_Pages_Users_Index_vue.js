@@ -189,6 +189,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   layout: _Layouts_Admin__WEBPACK_IMPORTED_MODULE_0__["default"],
@@ -207,6 +222,12 @@ __webpack_require__.r(__webpack_exports__);
       }, {
         text: 'E-Mail',
         value: 'email'
+      }, {
+        text: 'Roles',
+        value: 'roles'
+      }, {
+        text: 'Permissions',
+        value: 'permissions'
       }, {
         text: 'Action',
         value: 'actions'
@@ -541,9 +562,7 @@ var render = function () {
               ]),
               _vm._v(" "),
               _c("v-toolbar-title", [
-                _vm._v(
-                  "\n             \n            Liste des utilisateurs\n          "
-                ),
+                _vm._v("\n\n            Liste des utilisateurs\n          "),
               ]),
             ],
             1
@@ -623,6 +642,62 @@ var render = function () {
                   ]
                 },
                 proxy: true,
+              },
+              {
+                key: "item.roles",
+                fn: function (ref) {
+                  var item = ref.item
+                  return [
+                    _c(
+                      "v-chip-group",
+                      { attrs: { column: "" } },
+                      _vm._l(item.roles, function (role) {
+                        return _c(
+                          "v-chip",
+                          {
+                            key: role.id,
+                            attrs: {
+                              outlined: "",
+                              small: "",
+                              label: "",
+                              color: "success",
+                            },
+                          },
+                          [_vm._v(_vm._s(role.name))]
+                        )
+                      }),
+                      1
+                    ),
+                  ]
+                },
+              },
+              {
+                key: "item.permissions",
+                fn: function (ref) {
+                  var item = ref.item
+                  return [
+                    _c(
+                      "v-chip-group",
+                      { attrs: { column: "" } },
+                      _vm._l(item.permissions, function (permission) {
+                        return _c(
+                          "v-chip",
+                          {
+                            key: permission.id,
+                            attrs: {
+                              outlined: "",
+                              small: "",
+                              label: "",
+                              color: "success",
+                            },
+                          },
+                          [_vm._v(_vm._s(permission.name))]
+                        )
+                      }),
+                      1
+                    ),
+                  ]
+                },
               },
               {
                 key: "item.actions",

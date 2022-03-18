@@ -167,6 +167,26 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   layout: _Layouts_Admin__WEBPACK_IMPORTED_MODULE_0__["default"],
@@ -516,6 +536,44 @@ var render = function () {
                             _vm.$set(_vm.form, "email", $$v)
                           },
                           expression: "form.email",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("v-autocomplete", {
+                        attrs: {
+                          multiple: "",
+                          "small-chips": "",
+                          label: "Rôles",
+                          outlined: "",
+                          items: _vm.$page.props.roles,
+                          "item-text": "name",
+                          "item-value": "id",
+                        },
+                        model: {
+                          value: _vm.form.roles,
+                          callback: function ($$v) {
+                            _vm.$set(_vm.form, "roles", $$v)
+                          },
+                          expression: "form.roles",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("v-autocomplete", {
+                        attrs: {
+                          multiple: "",
+                          "small-chips": "",
+                          label: "Permissions",
+                          outlined: "",
+                          items: _vm.$page.props.permissions,
+                          "item-text": "name",
+                          "item-value": "id",
+                        },
+                        model: {
+                          value: _vm.form.permissions,
+                          callback: function ($$v) {
+                            _vm.$set(_vm.form, "permissions", $$v)
+                          },
+                          expression: "form.permissions",
                         },
                       }),
                       _vm._v(" "),
